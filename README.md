@@ -13,8 +13,7 @@ See [wiki.almalinux.org](https://wiki.almalinux.org/documentation/wsl.html#about
 #### Install a NerdFont
 - Install a NerdFont as explained here: [learn.microsoft.com](https://learn.microsoft.com/en-us/windows/terminal/tutorials/custom-prompt-setup#install-a-nerd-font) (I like FiraCode NF)
 #### Initial Steps w/ AlmaLinux
-*Open AlmaLinux from within Windows Terminal*
-Run the following commands
+*Open AlmaLinux from within Windows Terminal, then run the following commands*
 1. ```dnf check-update && sudo dnf update```
 2. ```sudo dnf config-manager --set-enabled crb```
 3. ```sudo dnf install epel-release```
