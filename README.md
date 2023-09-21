@@ -18,7 +18,8 @@ See [wiki.almalinux.org](https://wiki.almalinux.org/documentation/wsl.html#about
 2. ```sudo dnf config-manager --set-enabled crb```
 3. ```sudo dnf install epel-release```
 4. ```dnf check-update && sudo dnf update```
-
+5. ```sudo dnf install git```
+6. ```mkdir github.<your_username> && cd "$_"``` (*then clone this repo*)
 
 
 
