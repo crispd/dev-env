@@ -1,0 +1,18 @@
+# Files to ignore
+*.pyc
+*.pyo
+__pycache__/
+
+*.o
+O.*/
+
+.project
+
+/bin/
+/db/
+/lib/
+/dbd/
+/html/
+/doc/
+
+*.local

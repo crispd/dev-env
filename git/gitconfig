@@ -1,0 +1,20 @@
+[alias]
+	amend = commit --amend
+	fixup = rebase -i --autosquash --autostash
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+[merge]
+	ff = only
+[core]
+	excludesfile = ~/.gitignore
+[push]
+	default = current
+[rebase]
+	autostash = true
+[pull]
+	rebase = false
+[init]
+	defaultBranch = main
