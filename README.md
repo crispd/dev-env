@@ -1,6 +1,6 @@
 # dev-env
-An attempt at more properly defining my personal development enviornment with AlmaLinux9 in WSL2 (Windows)\
-*Currently based on a repo shared by mtrudel: https://github.com/mtrudel/dotfiles*
+An attempt at more properly defining my personal development enviornment with AlmaLinux9 in WSL2 (Windows)
+- *Currently based on a repo shared by mtrudel: https://github.com/mtrudel/dotfiles*
 
 ## Preparation
 #### Install WSL2 (admin required)
