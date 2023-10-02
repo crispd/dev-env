@@ -13,7 +13,8 @@ See [wiki.almalinux.org](https://wiki.almalinux.org/documentation/wsl.html#about
 #### Install Windows Terminal Preview from the Microsoft Store
 #### Install a NerdFont
 - Install a NerdFont as explained here: [learn.microsoft.com](https://learn.microsoft.com/en-us/windows/terminal/tutorials/custom-prompt-setup#install-a-nerd-font) (I like FiraCode NF)
-- *if using chocolatey:* `choco install firacodenf`
+  - *if using chocolatey:* `choco install firacodenf`
+- Select the installed nerdfont in your Windows Terminal App (as default, or for your AlmaLinux Profile)
 #### Initial Steps w/ AlmaLinux
 *Open AlmaLinux from within Windows Terminal, then run the following commands*
 1. ```dnf check-update && sudo dnf update```
