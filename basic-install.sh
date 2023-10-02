@@ -7,6 +7,7 @@ fi
 
 # Run all of the indicated plugins
 for i; do
+  echo ""
   echo "########## Installing ${i} ##########"
   source "$(dirname "$0")/${i}/install.sh"
 done
