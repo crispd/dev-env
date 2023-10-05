@@ -1,0 +1,7 @@
+Include ~/.ssh/config.private
+
+#Host *
+#UseKeychain yes
+#AddKeysToAgent yes
+#ServerAliveInterval 60
+#IdentityFile ~/.ssh/id_rsa

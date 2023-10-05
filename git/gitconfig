@@ -1,3 +1,10 @@
+# Using pull --rebase is good and fine.
+# This config assumes that this is not the default, though.
+#   Instead, a conflict of sorts should come up, and the user will have to use 'fixup'.
+#   This methodology, and the way fixup & rebasing are configured here, makes conflict
+#     handling more explicit, commit histories much easier to follow, and ensures
+#     that you'll be able to deal with one conflict at a time.
+# See: https://thoughtbot.com/blog/autosquashing-git-commits
 [alias]
 	amend = commit --amend
 	fixup = rebase -i --autosquash --autostash
@@ -8,12 +15,17 @@
 	status = auto
 [merge]
 	ff = only
+[diff]
+	tool = vimdiff
 [core]
+	editor = vim
 	excludesfile = ~/.gitignore
 [push]
 	default = current
 [rebase]
 	autostash = true
+[include]
+	path = ~/.gitconfig.private
 [pull]
 	rebase = false
 [init]

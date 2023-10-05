@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Defining list of basic-tools (packages) to install
-packages=("curl" "bat" "fd-find" "ripgrep" "htop")
+packages=("curl" "vim" "bat" "fd-find" "ripgrep" "htop")
 
 # Check if dnf is available (dnf-based systems)
 if ! command -v dnf &> /dev/null; then
