@@ -1,5 +1,7 @@
 #!/bin/bash
 
+SCRIPTPATH="$(dirname "$(realpath $0)")/nvim"
+
 # Install clang, rustup, bob
 sudo dnf install clang
 
@@ -20,10 +22,10 @@ bob use stable
 
 
 # Copy over profile.d contents
-for i in "$(dirname "$0")/profile.d/"*; do
+for i in "$SCRIPTPATH/profile.d/"*; do
   if [[ ! -e ~/.profile.d/$(basename "$i") ]]; then
     mv ~/.profile.d/$(basename "$i") ~/.profile.d/$(basename "$i").bak
   fi
-  ln -fns "$i" ~/.profile.d/$(basename "$i")
+  ln -fns "$SCRIPTPATH/profile.d/$(basename "$i")" "$HOME/.profile.d/$(basename "$i")"
 done
 

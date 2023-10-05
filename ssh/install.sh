@@ -17,6 +17,18 @@ ln -fns "$SCRIPTPATH/config" ~/.ssh/
 # Check for the presence of an SSH key and add it to the keychain
 if ! ssh-add -l &>/dev/null; then
   echo "No ssh key present! Add one via: 'ssh-keygen -t ed25519 -C <your_email@example.com>'"
-  echo "    (Your comment doesn't HAVE to be your email)
+  echo "    (Your comment doesn't HAVE to be your email)"
 fi
 
+# THE KEY FILENAMES IN .ssh_agent MIGHT BE DIFFERENT FOR YOU, OR YOU MAY HAVE MORE THAN ONE
+for i in "$SCRIPTPATH/profile.d/"*; do
+	echo "SCRIPTPATH: $SCRIPTPATH"
+	echo "CHECKING FOR: ~/.profile.d/$(basename "$i")"
+	# If NOT EMPTY
+	if [[ ! -e "~/.profile.d/$(basename "$i")" ]]; then
+		mv "~/.profile.d/$(basename "$i")" "~/.profile.d/$(basename "$i").bak"
+	fi
+	echo "LINKING $SCRIPTPATH/profile.d/$(basename "$i")"
+	echo "TO ~/.profile.d/$(basename "$i")"
+	ln -fns "$SCRIPTPATH/profile.d/$(basename "$i")" "$HOME/.profile.d/$(basename "$i")"
+done
