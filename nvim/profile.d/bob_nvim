@@ -1,0 +1,3 @@
+BOB_NVIM_PATH=$HOME/.local/share/bob/nvim-bin
+
+export PATH=$BOB_NVIM_PATH:$PATH"

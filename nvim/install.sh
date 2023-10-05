@@ -12,18 +12,18 @@ fi
 
 # Install bob if it's not already installed, then use it to install neovim
 if [[ ! -d ~/.local/share/bob ]]; then
-  cargo install --git https://github.com/MordechaiHadad/bob.git
+	cargo install --git https://github.com/MordechaiHadad/bob.git
 fi
 
-echo "DEV-ENV: Info: using `bob` to install the stable release of neovim (`nvim`)"
+echo "DEV-ENV: Info: Now using 'bob' to install the stable release of neovim ('nvim')"
 bob use stable
 
 
-# Copy over bashrc.d contents
-for i in "$(dirname "$0")/bashrc.d/"*; do
-  if [[ ! -e ~/.bashrc.d/$(basename "$i") ]]; then
-    mv ~/.bashrc.d/$(basename "$i") ~/.bashrc.d/$(basename "$i").bak
+# Copy over profile.d contents
+for i in "$(dirname "$0")/profile.d/"*; do
+  if [[ ! -e ~/.profile.d/$(basename "$i") ]]; then
+    mv ~/.profile.d/$(basename "$i") ~/.profile.d/$(basename "$i").bak
   fi
-  ln -fns "$i" ~/.bashrc.d/$(basename "$i")
+  ln -fns "$i" ~/.profile.d/$(basename "$i")
 done
 

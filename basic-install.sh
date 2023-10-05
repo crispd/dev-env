@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [[ ! -d ~/.profile.d ]]; then
+	mkdir -p ~/.profile.d
+fi
+
+
 # If no plugins were passed, default to installing a basic set in order
 if [ $# -eq 0 ]; then
   set -- git ssh basic-tools lang
