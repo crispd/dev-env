@@ -23,8 +23,9 @@ See [wiki.almalinux.org](https://wiki.almalinux.org/documentation/wsl.html#about
 3. ```sudo dnf install epel-release```
 4. ```dnf check-update && sudo dnf update```
 5. ```sudo dnf install git```
-6. ```mkdir github.<your_username> && cd "$_"``` (make your git folder wherever makes sense to you)
-7. *then clone this repo* (I use an ssh token, per github's guides. Now might be a good point to ensure existance of openssh and utilize ssh keys)
+6. *it might be good to add a `~/.profile` file, and make sure that your shell's dotfile calls it. add the following to your ~/.bashrc or ~/.zshrc file, for instance: `. "$HOME/.profile`
+7. ```mkdir github.<your_username> && cd "$_"``` (make your git folder wherever makes sense to you)
+8. *then clone this repo*
 
 #### Decide what portions of the install to run, then run them. (i.e. see basic-install.sh)
 

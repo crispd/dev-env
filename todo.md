@@ -12,3 +12,4 @@
 	a. Example: Theming WSL in Windows Terminal, or things like PowerShell, don't seem quite as easily scriptable. Not only that, but one might want to theme other apps as well--slack, firefox, obsidian, vscode, etc...
 	b. It may make sense to have a separate repository for these theming assets/configs.
 5. Come up with a better way of handling 'SCRIPTPATH', and add an 'uninstall' method for each install.
+6. Do better checking so that certain things in these installs don't get uneccessarily run.
