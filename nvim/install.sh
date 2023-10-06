@@ -21,7 +21,7 @@ echo "DEV-ENV: Info: Now using 'bob' to install the stable release of neovim ('n
 bob use stable
 
 
-# Copy over profile.d contents
+# Backup, then replace files in ~/.profile.d/ if they exist in dev-env/nvim/profile.d/
 for i in "$SCRIPTPATH/profile.d/"*; do
   if [[ ! -e ~/.profile.d/$(basename "$i") ]]; then
     mv ~/.profile.d/$(basename "$i") ~/.profile.d/$(basename "$i").bak
