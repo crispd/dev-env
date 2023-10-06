@@ -27,7 +27,9 @@ See [wiki.almalinux.org](https://wiki.almalinux.org/documentation/wsl.html#about
 7. ```mkdir github.<your_username> && cd "$_"``` (make your git folder wherever makes sense to you)
 8. *then clone this repo*
 
-#### Decide what portions of the install to run, then run them. (i.e. see basic-install.sh)
+#### Decide what portions of the install to run, then run them.
+ - see `install.sh` for basic tools
+ - can also call `install.sh` with an argument like `./install.sh nvim`
 
 # License
 MIT
