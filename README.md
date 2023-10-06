@@ -23,13 +23,13 @@ See [wiki.almalinux.org](https://wiki.almalinux.org/documentation/wsl.html#about
 3. ```sudo dnf install epel-release```
 4. ```dnf check-update && sudo dnf update```
 5. ```sudo dnf install git```
-6. *it might be good to add a `~/.profile` file, and make sure that your shell's dotfile calls it. add the following to your ~/.bashrc or ~/.zshrc file, for instance: `. "$HOME/.profile`
 7. ```mkdir github.<your_username> && cd "$_"``` (make your git folder wherever makes sense to you)
-8. *then clone this repo*
-
-#### Decide what portions of the install to run, then run them.
+8. *then clone this repo and decide what you want installed*
  - see `install.sh` for basic tools
  - can also call `install.sh` with an argument like `./install.sh nvim`
+
+*you will likely need to add something like `. ~/.profile` added to your given dot-rc file in order for any of this to work. Also, starship prompt won't fully install unless you add the eval-starship line to your dot-rc file as well. Future updates will be made.*
+
 
 # License
 MIT
