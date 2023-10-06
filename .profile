@@ -8,4 +8,4 @@ if [[ -e ~/.aliases.private ]]; then
 	. ~/.aliases.private
 fi
 
-
+clear

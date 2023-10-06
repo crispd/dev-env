@@ -1,11 +1,10 @@
 #!/bin/bash
 
-# Modified install of LazyVim for nvim-switcher
-# 	*add others here if desired; like AstroVim, or NvChad*
-if [[ ! -d ~/.config/LazyVim ]]; then
-	git clone --depth 1 https://github.com/LazyVim/LazyVim ~/.config/LazyVim
-fi
+# Installing nvim distributions like LazyVim, AstroVim, NvChad, etc.
+source "$SCRIPT_PATH/nvim-switcher/dist-installs/choices.sh"
 
+# Anything in ~/.profile.d/ with the same name as what's in ./profile.d/ is backed up
+# 	and a symlink is added to ~/.profile.d/ for each file found in ./profile.d/
 for i in "$SCRIPT_PATH/nvim-switcher/profile.d/"*; do
 	if [[ ! -e ~/.profile.d/$(basename "$i") ]]; then
 		mv ~/.profile.d/$(basename "$i") ~/.profile.d/$(basename "$i").bak
@@ -13,4 +12,5 @@ for i in "$SCRIPT_PATH/nvim-switcher/profile.d/"*; do
 	ln -fns "$SCRIPT_PATH/nvim-switcher/profile.d/$(basename "$i")" "$HOME/.profile.d/$(basename "$i")"
 done
 
-. ~/.profile
+# Auto-source the new .profile for the current shell
+source ~/.profile

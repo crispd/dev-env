@@ -7,5 +7,5 @@ export GH_HOME=~/github
 alias cd-gh='cd $GH_HOME'
 alias cd-dev-env='cd-gh && cd dev-env'
 
-alias l='ls -la'
-
+alias l='ls -a'
+alias ll='ls -la'

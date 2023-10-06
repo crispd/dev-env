@@ -1,13 +1,29 @@
 # Neovim config switcher (this should work in both bash & zsh)
+# 	See: [reference](https://michaeluloth.com/neovim-switch-configs/)
+#
+# The following aliases can be used to startup their respective
+# 	nvim distributions.
+#
+#	(i.e. to edit a .bashrc file) `nvim-lazy ~/.bashrc` 
+#
+# TODO:	Re-install LazyVim using target ~/.config/nvim-lazy
+# TODO: At some point... change LazyVim to nvim-lazy everywhere it's seen here.
 alias nvim-lazy="NVIM_APPNAME=LazyVim nvim"
-# If the following two, or others are uncommented/added, their 
-# 	alias will have to be added to the items list at the
-# 	top of the nvims() function
 #alias nvim-chad="NVIM_APPNAME=NvChad nvim"
 #alias nvim-astro="NVIM_APPNAME=AstroNvim nvim"
 
-nvims() {
-  items=("default" "nvim-lazy")
+function nvims() {
+  # Add an installed nvim distribution to the nvims list by
+  # 	including its alias in this list variable (items).
+  items=("default" "LazyVim")
+  # Display options from listvar 'items' in a fzf prompt so
+  # 	that the user can select the one they want used.
+  # 	If exited, $config=0, and nvims() returns 0.
+  # 	If 'default' is selected, $config="".
+  # 	NVIM_APPNAME is then set to "$config nvim $@"
+  # 		Examples: 
+  # 			`LazyVim nvim ~/.bashrc`
+  # 			`nvim ~/.profile` (default)
   config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --height=~50% --layout=reverse --border --exit-0)
   if [[ -z $config ]]; then
     echo "Nothing selected"
