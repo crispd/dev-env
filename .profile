@@ -8,4 +8,6 @@ if [[ -e ~/.aliases.private ]]; then
 	. ~/.aliases.private
 fi
 
-clear
+# Thinking of how to clear some of the stuff that happens on terminal-open, but
+# 	I don't want to clear things done by dev-env which re-source ~/.profile
+#clear
