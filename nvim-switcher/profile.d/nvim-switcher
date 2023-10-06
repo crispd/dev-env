@@ -1,0 +1,28 @@
+# Neovim config switcher (this should work in both bash & zsh)
+alias nvim-lazy="NVIM_APPNAME=LazyVim nvim"
+# If the following two, or others are uncommented/added, their 
+# 	alias will have to be added to the items list at the
+# 	top of the nvims() function
+#alias nvim-chad="NVIM_APPNAME=NvChad nvim"
+#alias nvim-astro="NVIM_APPNAME=AstroNvim nvim"
+
+nvims() {
+  items=("default" "nvim-lazy")
+  config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --height=~50% --layout=reverse --border --exit-0)
+  if [[ -z $config ]]; then
+    echo "Nothing selected"
+    return 0
+  elif [[ $config == "default" ]]; then
+    config=""
+  fi
+  NVIM_APPNAME=$config nvim $@
+}
+#
+#if [ -n "$($SHELL -c 'echo $ZSH_VERSION')" ]; then
+#   bindkey -s ^a "nvims\n"
+#elif [ -n "$($SHELL -c 'echo $BASH_VERSION')" ]; then
+#   bind -x '"\C-n": nvims'
+#else
+#   bindkey -s ^a "nvims\n"
+#fi
+

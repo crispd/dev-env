@@ -7,7 +7,7 @@ export DEVENV_INSTALL="$SCRIPT_PATH"
 echo "######################################"
 echo "------------- dnf update -------------"
 echo "######################################"
-dnf check-update && sudo dnf update -y
+dnf check-update -q && sudo dnf update -y -q
 
 
 # Create ~/.profile.d directory if non-existant
