@@ -1,5 +1,5 @@
 # .profile (shell profile management linked to from $HOME by dev-env scripts)
-if [[ -d ~/.profile.d ]]; then
+if [ -d ~/.profile.d ]; then
   for i in ~/.profile.d/*; do . $i; done
 fi
 
