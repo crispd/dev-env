@@ -4,4 +4,5 @@
 # Inserts a blank line between shell prompts
 add_newline = false
 
-
+# EVERYTHING BELOW THIS LINE IS FROM THE 'bracketed-segments.toml' PRESET
+# See [here](https://starship.rs/presets/bracketed-segments.html)

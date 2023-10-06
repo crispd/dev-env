@@ -45,3 +45,5 @@ for i; do
   source "$(dirname "$0")/${i}/install.sh"
 done
 
+
+source ~/.profile
