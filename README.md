@@ -25,8 +25,10 @@ See [wiki.almalinux.org](https://wiki.almalinux.org/documentation/wsl.html#about
 3. ```sudo dnf install epel-release```
 4. ```dnf check-update && sudo dnf update```
 5. ```sudo dnf install git```
-7. ```mkdir github.<your_username> && cd "$_"``` (make your git folder wherever makes sense to you)
-8. *then clone this repo and decide what you want installed*
+
+## Clone dev-env.git
+
+## Decide what you want to install. Use `./install.sh` to do so.
  - see `install.sh` for basic tools
  - can also call `install.sh` with an argument like `./install.sh nvim`
 
