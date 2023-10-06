@@ -4,5 +4,12 @@
 # Inserts a blank line between shell prompts
 add_newline = false
 
+[line_break]
+disabled = true
+
+[character]
+success_symbol = " [➜](bold green) "
+error_symbol = " [✗](bold red) "
+
 # EVERYTHING BELOW THIS LINE IS FROM THE 'bracketed-segments.toml' PRESET
 # See [here](https://starship.rs/presets/bracketed-segments.html)

@@ -25,7 +25,7 @@ for i in "$SCRIPTPATH/profile.d/"*; do
 	echo "SCRIPTPATH: $SCRIPTPATH"
 	echo "CHECKING FOR: ~/.profile.d/$(basename "$i")"
 	# If NOT EMPTY
-	if [[ ! -e "~/.profile.d/$(basename "$i")" ]]; then
+	if [ -e "~/.profile.d/$(basename "$i")" ] && [ -f "~/.profile.d/$(basename "$i")" ]; then
 		mv "~/.profile.d/$(basename "$i")" "~/.profile.d/$(basename "$i").bak"
 	fi
 	echo "LINKING $SCRIPTPATH/profile.d/$(basename "$i")"
