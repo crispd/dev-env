@@ -4,6 +4,8 @@ An attempt at more properly defining my personal development enviornment with Al
 - *so-far, this is a proof of concept. this repo may change quite a bit as I consider how to best separate the subsets of tools this handles/configures...*
 
 ## Preparation
+*TODO: update readme to reflect preference for winget over choco*
+
 #### Install WSL2 (admin required)
 See [learn.microsoft.com](https://learn.microsoft.com/en-us/windows/wsl/install)
 - Run ```wsl --install``` from an elevated PowerShell
