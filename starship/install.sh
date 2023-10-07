@@ -20,12 +20,11 @@ fi
 
 # Make a backup of the ~/.profile.d/starship_prompt if it already exists and is a regular file
 STARSHIP_INCLUDE_FILE="$HOME/.profile.d/starship_prompt"
-#if [ -e $STARSHIP_INCLUDE_FILE ] && [ -f $STARSHIP_INCLUDE_FILE ]; then
-#	mv $STARSHIP_INCLUDE_FILE "$STARSHIP_INCLUDE_FILE.bak"
-#fi
+if [ -e $STARSHIP_INCLUDE_FILE ] && [ -f $STARSHIP_INCLUDE_FILE ]; then
+	mv $STARSHIP_INCLUDE_FILE "$STARSHIP_INCLUDE_FILE.bak"
+fi
 CURRENT_SHELL="$(basename $SHELL)"
-#ln -fns "$SCRIPT_PATH/starship/setup/$CURRENT_SHELL" "$HOME/.profile.d/starship_prompt"
-#TODO: Verify. I added `. $HOME/.cargo/env` to start of `~/.bashrc`, and the `eval "$(starship init bash)" to the end, and it works. Look into finding a way to make this cleaner later...
+ln -fns "$SCRIPT_PATH/starship/setup/$CURRENT_SHELL" "$HOME/.profile.d/starship_prompt"
 
 # Construct the starship prompt defining .toml file, and put it to use.
 source "$SCRIPT_PATH/starship/toml/construct.sh"
