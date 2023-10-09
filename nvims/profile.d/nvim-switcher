@@ -30,7 +30,9 @@ function nvims() {
   fi
   NVIM_APPNAME=$config nvim $@
 }
-#
+# A keybinding to access the nvims menu.
+# I'll want to change this to something other than 'a' as
+# I'm used to ctl-a bringing me to front of line...
 #if [ -n "$($SHELL -c 'echo $ZSH_VERSION')" ]; then
 #   bindkey -s ^a "nvims\n"
 #elif [ -n "$($SHELL -c 'echo $BASH_VERSION')" ]; then

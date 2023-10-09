@@ -9,3 +9,14 @@
 4. Come up with a better way of handling 'SCRIPTPATH', and add an 'uninstall' method for each install.
 5. Do better checking so that certain things in these installs don't end up running if something's already been installed
 6. See if the way I'm doing file/folder testing actually makes sense...
+
+# Explore
+1. Use of the yazi terminal file manager: https://yazi-rs.github.io/docs/
+    a. Source: https://github.com/sxyazi/yazi
+    b. Showcase: https://yazi-rs.github.io/docs/showcase
+    c. Installation Guidance:
+        - [windows?](https://github.com/sxyazi/yazi/wiki/Windows-Installation-Guide)
+        - [General](https://yazi-rs.github.io/docs/usage/installation)
+2. Using something like vscodeepics to improve syntax highlighting in bat/nvim
+3. GitHub CLI
+4. Improved local git project management & switching
