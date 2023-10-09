@@ -32,7 +32,7 @@ See [wiki.almalinux.org](https://wiki.almalinux.org/documentation/wsl.html#about
  - see `install.sh` for basic tools
  - can also call `install.sh` with an argument like `./install.sh nvim`
 
-*you will likely need to add something like `. ~/.profile` added to your given dot-rc file in order for any of this to work. Also, starship prompt won't fully install unless you add the eval-starship line to your dot-rc file as well. Future updates will be made.*
+*you should add a line to your shell-specific dot-file (~/.bashrc, ~/.zshrc) that sources the ~/.profile folder like so: `. ~/.profile`. Remember, this is a work in progress... [todo.md](./todo.md) is where I've offloaded ideas for future improvement (though this repo is **not** my current focus.*
 
 
 # License
