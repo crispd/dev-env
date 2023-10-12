@@ -4,7 +4,7 @@ An attempt at more properly defining my personal development enviornment with Al
 - *so-far, this is a proof of concept. this repo may change quite a bit as I consider how to best separate the subsets of tools this handles/configures...*
 
 ## fastfetch
-![fastfetch]([assets/almalinux-wsl-fastfetch.png)
+![fastfetch](assets/almalinux-wsl-fastfetch.png)
 
 
 ## Preparation
