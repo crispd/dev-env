@@ -15,7 +15,7 @@ See [learn.microsoft.com](https://learn.microsoft.com/en-us/windows/wsl/install)
 See [wiki.almalinux.org](https://wiki.almalinux.org/documentation/wsl.html#about-wsl)
 - Install AlmaLinux9 from the Microsoft Store
     - Using winget: `winget install "AlmaLinux 9"`
-- Open the AlmaLinux9 _app_. A terminal should open and run stuff. When complete, AlmaLinux9 can be run in WSL.
+- Open the AlmaLinux9 _app_. A terminal should open and run stuff. When complete, AlmaLinux9 will be a profile option in Windows Terminal (or Windows Terminal Preview).
 #### Install Windows Terminal Preview from the Microsoft Store
 - Using winget: `winget install "Windows Terminal Preview"`
 #### Install a NerdFont
