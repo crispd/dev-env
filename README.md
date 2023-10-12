@@ -32,6 +32,8 @@ See [wiki.almalinux.org](https://wiki.almalinux.org/documentation/wsl.html#about
 6. ```sudo dnf install git```
 
 ## Clone dev-env.git
+- `https://github.com/crispd/dev-env.git`*, or...*
+- `https://ghe-pip2.fnal.gov/dcrisp/dev-env.git`
 
 ## Decide what you want to install. Use `./install.sh` to do so.
  - see `install.sh` for basic tools
