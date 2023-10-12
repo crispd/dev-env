@@ -16,11 +16,13 @@ See [learn.microsoft.com](https://learn.microsoft.com/en-us/windows/wsl/install)
 #### Install AlmaLinux9
 See [wiki.almalinux.org](https://wiki.almalinux.org/documentation/wsl.html#about-wsl)
 - Install AlmaLinux9 from the Microsoft Store
+    - Using winget: `winget install "AlmaLinux 9"`
 - Open the AlmaLinux9 _app_. A terminal should open and run stuff. When complete, AlmaLinux9 can be run in WSL.
 #### Install Windows Terminal Preview from the Microsoft Store
+- Using winget: `winget install "Windows Terminal Preview"`
 #### Install a NerdFont
 - Install a NerdFont as explained here: [learn.microsoft.com](https://learn.microsoft.com/en-us/windows/terminal/tutorials/custom-prompt-setup#install-a-nerd-font) (I like FiraCode NF)
-  - *if using chocolatey:* `choco install firacodenf`
+  - *if using chocolatey:* `choco install firacodenf` (unsure if there's a winget option I'm not seeing)
 - Select the installed nerdfont in your Windows Terminal App (as default, or for your AlmaLinux Profile)
 #### Initial Steps w/ AlmaLinux
 *Open AlmaLinux from within Windows Terminal, then run the following commands*
