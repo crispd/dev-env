@@ -8,8 +8,6 @@ An attempt at more properly defining my personal development enviornment with Al
 
 
 ## Preparation
-*TODO: update readme to reflect preference for winget over choco*
-
 #### Install WSL2 (admin required)
 See [learn.microsoft.com](https://learn.microsoft.com/en-us/windows/wsl/install)
 - Run ```wsl --install``` from an elevated PowerShell
