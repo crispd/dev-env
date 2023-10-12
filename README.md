@@ -3,6 +3,10 @@ An attempt at more properly defining my personal development enviornment with Al
 - *Currently based on a repo shared by mtrudel: https://github.com/mtrudel/dotfiles*
 - *so-far, this is a proof of concept. this repo may change quite a bit as I consider how to best separate the subsets of tools this handles/configures...*
 
+## fastfetch
+![[./assets/almalinux-wsl-fastfetch.png]]
+
+
 ## Preparation
 *TODO: update readme to reflect preference for winget over choco*
 
@@ -24,7 +28,8 @@ See [wiki.almalinux.org](https://wiki.almalinux.org/documentation/wsl.html#about
 2. ```sudo dnf config-manager --set-enabled crb```
 3. ```sudo dnf install epel-release```
 4. ```dnf check-update && sudo dnf update```
-5. ```sudo dnf install git```
+5. ```sudo dnf upgrade``` (update to AlmaLinux 9.2)
+6. ```sudo dnf install git```
 
 ## Clone dev-env.git
 
