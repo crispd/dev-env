@@ -1,7 +1,8 @@
 # dev-env
 An attempt at more properly defining my personal development enviornment with AlmaLinux9 in WSL2 (Windows)
+- If not using WSL to run AlmaLinux, simply consider whether you want to install a nerd font (preparation step 4) and skip to (preparation step 5)
 - *Currently based on a repo shared by mtrudel: https://github.com/mtrudel/dotfiles*
-- *so-far, this is a proof of concept. this repo may change quite a bit as I consider how to best separate the subsets of tools this handles/configures...*
+- *so-far, this is a proof of concept. While it has worked for me to install AlmaLinux distros on a few personal machines, it was really just thrown together, and is subject to quite a few changes going forward.*
 
 ## Some comments on WIN package management
 The winget package manager is a really good alternative for most windows app/package installations, and seems to be what will eventually become the default package management tool for the windows OS in the future. You'll find that it is pre-installed on your machine by default. Understand that winget looks at both msstore as well as it's own package repositories; so sometimes you will see more than one version of a desired package show up when using `winget search`. At the moment, you should assume that anything not listed as coming directly from the msstore package repo will not necessarily receive automatic updates once you have it installed. I personally prefer this with most things, but just FYI. There is also the chocolatey package manager, but this is not bundled with windows by default, and you will have to install it with a few simple powershell commands that are easily found on their online guide.
