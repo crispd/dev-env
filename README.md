@@ -48,10 +48,10 @@ See [wiki.almalinux.org](https://wiki.almalinux.org/documentation/wsl.html#about
  - `install.sh` can also be passed args for selective installation of things like neovim (nvim)
 
 #### **Note: some installations require that code get added to your dotfiles**
-    - these scripts will add a ~/.profile dotifle to your home directory that will iterate through a new ~/.profile.d/ directory in which any new dotfile-like code will live
-    - this process does not remove any existing ~/.profile dotfile you may have, the existing file will become ~/.profile.bak before placing the new one
-    - in order for this to work, the user will have to source the ~/.profile dotfile from whatever existing dotfiles their shell is using (i.e. ~/.bashrc, ~/.zshrc). The needed line is simply the following:
-        - `. ~/.profile`
+- these scripts will add a ~/.profile dotifle to your home directory that will iterate through a new ~/.profile.d/ directory in which any new dotfile-like code will live
+- this process does not remove any existing ~/.profile dotfile you may have, the existing file will become ~/.profile.bak before placing the new one
+- in order for this to work, the user will have to source the ~/.profile dotfile from whatever existing dotfiles their shell is using (i.e. ~/.bashrc, ~/.zshrc). The needed line is simply the following:
+    - `. ~/.profile`
 
 *Again, this is a work in progress... [todo.md](./todo.md) is where I've offloaded ideas for future improvement (this repo is **not** my current focus, but I do tend to tweak it occasionally).*
 
