@@ -47,7 +47,7 @@ See [wiki.almalinux.org](https://wiki.almalinux.org/documentation/wsl.html#about
  - running `install.sh` withought args will install some basic tools, inspect the file to see which.
  - `install.sh` can also be passed args for selective installation of things like neovim (nvim)
 
-**Note: some installations require that code get added to your dotfiles**
+#### **Note: some installations require that code get added to your dotfiles**
     - these scripts will add a ~/.profile dotifle to your home directory that will iterate through a new ~/.profile.d/ directory in which any new dotfile-like code will live
     - this process does not remove any existing ~/.profile dotfile you may have, the existing file will become ~/.profile.bak before placing the new one
     - in order for this to work, the user will have to source the ~/.profile dotfile from whatever existing dotfiles their shell is using (i.e. ~/.bashrc, ~/.zshrc). The needed line is simply the following:
