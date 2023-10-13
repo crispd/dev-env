@@ -25,7 +25,7 @@ See [wiki.almalinux.org](https://wiki.almalinux.org/documentation/wsl.html#about
   - *if using chocolatey:* `choco install firacodenf` (unsure if there's a winget option I'm not seeing)
 - Select the installed nerdfont in your Windows Terminal App (as default, or for your AlmaLinux Profile)
 #### 5. Initial Steps w/ AlmaLinux
-*Open AlmaLinux from within Windows Terminal, then run the following commands*
+*Open AlmaLinux, then run the following commands. I prefer to use Windows Terminal Preview, but you can run it in the base Terminal offered by the AlmaLinux WSL app or see other terminal options available in either msstore or winget repos*
 1. ```dnf check-update && sudo dnf update```
 2. ```sudo dnf config-manager --set-enabled crb```
 3. ```sudo dnf install epel-release```
