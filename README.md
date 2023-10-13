@@ -4,13 +4,13 @@ An attempt at more properly defining my personal development enviornment with Al
 - *Currently based on a repo shared by mtrudel: https://github.com/mtrudel/dotfiles*
 - *so-far, this is a proof of concept. While it has worked for me to configure fresh AlmaLinux installs on a few of my personal machines, it was really just thrown together, and is subject to quite a few changes going forward.*
 
-## Some comments on WIN package management
-The winget package manager is a really good alternative for most windows app/package installations, and seems to be what will eventually become the default package management tool for the windows OS in the future. You'll find that it is pre-installed on your machine by default. Understand that winget looks at both msstore as well as it's own package repositories; so sometimes you will see more than one version of a desired package show up when using `winget search`. At the moment, you should assume that anything not listed as coming directly from the msstore package repo will not necessarily receive automatic updates once you have it installed. I personally prefer this with most things, but just FYI. There is also the chocolatey package manager, but this is not bundled with windows by default, and you will have to install it with a few simple powershell commands that are easily found on their online guide.
-
-## fastfetch
+### A snapshot to show my resulting WSL configuration in Windows Terminal
 ![fastfetch](assets/almalinux-wsl-fastfetch.png)
 
+### Some comments on WIN package management
+The winget package manager is a really good alternative for most windows app/package installations, and seems to be what will eventually become the default package management tool for the windows OS in the future. You'll find that it is pre-installed on your machine by default. Understand that winget looks at both msstore as well as it's own package repositories; so sometimes you will see more than one version of a desired package show up when using `winget search`. At the moment, you should assume that anything not listed as coming directly from the msstore package repo will not necessarily receive automatic updates once you have it installed. I personally prefer this with most things, but just FYI. There is also the chocolatey package manager, but this is not bundled with windows by default, and you will have to install it with a few simple powershell commands that are easily found on their online guide.
 
+___
 ## Preparation
 #### 1. Install WSL2 (admin required)
 See [learn.microsoft.com](https://learn.microsoft.com/en-us/windows/wsl/install)
@@ -38,6 +38,7 @@ See [wiki.almalinux.org](https://wiki.almalinux.org/documentation/wsl.html#about
 6. ```sudo dnf upgrade``` (update to AlmaLinux 9.2)
 7. ```sudo dnf install git```
 
+___
 ## Using this repo to setup a development environment
 #### 1. Clone dev-env.git locally
 *These URLs can be seen on the github page under the green 'code' dropdown button. The below lines use https, but using ssh is preferred.*
@@ -56,6 +57,6 @@ See [wiki.almalinux.org](https://wiki.almalinux.org/documentation/wsl.html#about
 
 *Again, this is a work in progress... [todo.md](./todo.md) is where I've offloaded ideas for future improvement (this repo is **not** my current focus, but I do tend to tweak it occasionally).*
 
-
+___
 # License
 MIT
