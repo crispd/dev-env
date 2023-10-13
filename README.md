@@ -3,6 +3,9 @@ An attempt at more properly defining my personal development enviornment with Al
 - *Currently based on a repo shared by mtrudel: https://github.com/mtrudel/dotfiles*
 - *so-far, this is a proof of concept. this repo may change quite a bit as I consider how to best separate the subsets of tools this handles/configures...*
 
+## Some comments on WIN package management
+The winget package manager is a really good alternative for most windows app/package installations, and seems to be what will eventually become the default package management tool for the windows OS in the future. You'll find that it is pre-installed on your machine by default. Understand that winget looks at both msstore as well as it's own package repositories; so sometimes you will see more than one version of a desired package show up when using `winget search`. At the moment, you should assume that anything not listed as coming directly from the msstore package repo will not necessarily receive automatic updates once you have it installed. I personally prefer this with most things, but just FYI. There is also the chocolatey package manager, but this is not bundled with windows by default, and you will have to install it with a few simple powershell commands that are easily found on their online guide.
+
 ## fastfetch
 ![fastfetch](assets/almalinux-wsl-fastfetch.png)
 
@@ -25,13 +28,14 @@ See [wiki.almalinux.org](https://wiki.almalinux.org/documentation/wsl.html#about
   - *if using chocolatey:* `choco install firacodenf` (unsure if there's a winget option I'm not seeing)
 - Select the installed nerdfont in your Windows Terminal App (as default, or for your AlmaLinux Profile)
 #### 5. Initial Steps w/ AlmaLinux
-*Open AlmaLinux, then run the following commands. I prefer to use Windows Terminal Preview, but you can run it in the base Terminal offered by the AlmaLinux WSL app or see other terminal options available in either msstore or winget repos*
-1. ```dnf check-update && sudo dnf update```
-2. ```sudo dnf config-manager --set-enabled crb```
-3. ```sudo dnf install epel-release```
-4. ```dnf check-update && sudo dnf update```
-5. ```sudo dnf upgrade``` (update to AlmaLinux 9.2)
-6. ```sudo dnf install git```
+*I prefer to run both my WSL distros and Powershell/Powershell Preview from the Windows Terminal Preview app, but you can run it in the default terminal offered by the AlmaLinux WSL package or pick from other terminal apps available in either msstore, winget, or chocolatey repos*
+1. Open AlmaLinux in the terminal of your choice, and run the following commands before using dev-env's install scripts.
+2. ```dnf check-update && sudo dnf update```
+3. ```sudo dnf config-manager --set-enabled crb```
+4. ```sudo dnf install epel-release```
+5. ```dnf check-update && sudo dnf update```
+6. ```sudo dnf upgrade``` (update to AlmaLinux 9.2)
+7. ```sudo dnf install git```
 
 ## Using this repo to setup a development environment
 #### 1. Clone dev-env.git locally
