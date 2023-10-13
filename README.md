@@ -40,7 +40,7 @@ See [wiki.almalinux.org](https://wiki.almalinux.org/documentation/wsl.html#about
 
 ## Using this repo to setup a development environment
 #### 1. Clone dev-env.git locally
-*these can also be found on the github page under 'clone'. below lines use https, but using ssh is preferred.*
+*These URLs can be seen on the github page under the green 'code' dropdown button. The below lines use https, but using ssh is preferred.*
 - `git clone https://github.com/crispd/dev-env.git`*, or...*
 - `git clone https://ghe-pip2.fnal.gov/dcrisp/dev-env.git`
 
