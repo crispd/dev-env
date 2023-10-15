@@ -7,14 +7,6 @@ add_newline = false
 [line_break]
 disabled = true
 
-[shell]
-fish_indicator = ' 󰈺 '
-powershell_indicator = ' _'
-bash_indicator = " "
-unknown_indicator = ' ?'
-style = 'cyan bold'
-disabled = false
-
 [character]
 success_symbol = " [➜](bold green) "
 error_symbol = " [✗](bold red) "
