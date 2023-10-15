@@ -11,19 +11,19 @@ dnf check-update -q && sudo dnf update -y -q
 
 
 # Create ~/.profile.d directory if non-existant
-if [[ ! -d ~/.profile.d ]]; then
+if [ ! -d ~/.profile.d ]; then
 	mkdir -p ~/.profile.d
 fi
 
 
 # Link dev-env's .profile file (which makes sure to iterate through ~/.profile.d)
-if [[ ! -e ~/.profile ]]; then
+if [ -e ~/.profile ]; then
 	mv ~/.profile ~/.profile.bak
 fi
 ln -fns "$SCRIPT_PATH/.profile" ~/.profile
 
 # If user already has an ~/.aliases file, this makes sure it will get picked up by ~/.profile
-if [[ -e ~/.aliases ]]; then
+if [ -e ~/.aliases ]; then
 	mv ~/.aliases ~/.aliases.private
 fi
 

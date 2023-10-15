@@ -32,4 +32,7 @@ STARSHIP_PROMPT_DEF="$HOME/.config/starship.toml"
 if [ -e $STARSHIP_PROMPT_DEF ] && [ -f $STARSHIP_PROMPT_DEF ]; then
 	mv $STARSHIP_PROMPT_DEF "$STARSHIP_PROMPT_DEF.bak"
 fi
+if [ ! -d ~/.config ]; then
+	mkdir ~/.config
+fi
 ln -fns "$SCRIPT_PATH/starship/toml/starship.toml" "$HOME/.config/starship.toml"
