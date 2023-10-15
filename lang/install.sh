@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Defining list of basic-tools (packages) to install
-packages=("clang" "gcc" "cmake" "python3" "python3-pip" "ShellCheck")
+packages=("clang" "gcc" "cmake" "ccache" "python3" "python3-pip" "ShellCheck")
 
 # Check if dnf is available (dnf-based systems)
 if ! command -v dnf &> /dev/null; then
