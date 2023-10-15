@@ -8,7 +8,7 @@ sudo dnf install openssh
 mkdir -m 700 -p ~/.ssh
 
 ## Copy over config
-if [[ ! -e ~/.ssh/config ]]; then
+if [ -e ~/.ssh/config ]; then
   mv ~/.ssh/config ~/.ssh/config.bak
 fi
 #ln -fns "$(dirname "$0")/config" ~/.ssh/
