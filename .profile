@@ -11,3 +11,4 @@ fi
 # Thinking of how to clear some of the stuff that happens on terminal-open, but
 # 	I don't want to clear things done by dev-env which re-source ~/.profile
 #clear
+. "$HOME/.cargo/env"
