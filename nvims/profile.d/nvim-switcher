@@ -4,12 +4,22 @@
 # The following aliases can be used to startup their respective
 # 	nvim distributions.
 #
-#	(i.e. to edit a .bashrc file) `nvim-lazy ~/.bashrc` 
+#	i.e. to open a .bashrc file in LazyVim: `nvim-lazy ~/.bashrc` 
+#
+
+# Chosen to use nvim-<distro_shorthand> as aliases, but they could be anything.
+# NVIM_APPNAME, I'm pretty sure, needs to be the name of the folder you installed
+# 	the distro in. ~/.config/ may be the default, and there's likely an
+# 	envar that nvim uses if this needs to be changed. Check the install scripts
+# 	in the following folder if your unsure how your nvim distros are being installed:
+# 	
+# 	$(dev-env_top)/nvims/dist-installs/
 #
 
 alias nvim-lazy="NVIM_APPNAME=LazyVim nvim"
 #alias nvim-chad="NVIM_APPNAME=NvChad nvim"
 #alias nvim-astro="NVIM_APPNAME=AstroNvim nvim"
+
 
 function nvims() {
   # Add an installed nvim distribution to the nvims list by
@@ -30,9 +40,12 @@ function nvims() {
   fi
   NVIM_APPNAME=$config nvim $@
 }
+
 # A keybinding to access the nvims menu.
-# I'll want to change this to something other than 'a' as
-# I'm used to ctl-a bringing me to front of line...
+# I'll want to change this to something other than 'a'...
+#	*i'm used to ctl+a moving cursor to start of line in bash*
+#
+
 #if [ -n "$($SHELL -c 'echo $ZSH_VERSION')" ]; then
 #   bindkey -s ^a "nvims\n"
 #elif [ -n "$($SHELL -c 'echo $BASH_VERSION')" ]; then
