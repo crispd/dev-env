@@ -3,6 +3,8 @@
 # 	LazyVim
 # 	AstroVim
 # 	NvChad
+# 	kickstart
+# 	LunarVim
 # 	...there are many others...
 
 DIST_INSTALLS="$SCRIPT_PATH/nvims/dist-installs"
