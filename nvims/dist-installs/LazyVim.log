@@ -1,9 +1,0 @@
-Cloning into '/home/dcrisp-wsl/.config/LazyVim'...
-fatal: unable to access 'https://github.com/LazyVim/starter/': Could not resolve host: github.com
-Cloning into '/home/dcrisp-wsl/.config/LazyVim'...
-ssh: Could not resolve hostname github.com: Name or service not known
-fatal: Could not read from remote repository.
-
-Please make sure you have the correct access rights
-and the repository exists.
-Cloning into '/home/dcrisp-wsl/.config/LazyVim'...

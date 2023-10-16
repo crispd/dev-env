@@ -1,2 +1,8 @@
+# To enable .gitignore changes after the fact, run the following
+# 1. Commit all pending changes. `cd` to your repo's top, then: `git add . && git commit -m "your message"`
+# 2. Remove everything from the index: `git rm -r --cached .`
+# 3. Re-add everything (this will respect your new changes to .gitignore): `git add .`
+# 4. Commit again: `git commit -m "new .gitignore rules in effect"`
+
 # Including my logfiles seems like a bad idea.
 *.log
