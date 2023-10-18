@@ -1,7 +1,8 @@
-Include ~/.ssh/config.private
+Include ~/.ssh/config.git
+Include ~/.ssh/config.fermi
 
-#Host *
-#UseKeychain yes
-#AddKeysToAgent yes
-#ServerAliveInterval 60
-#IdentityFile ~/.ssh/id_rsa
+# Fermi-specific & Git-specific settings are in other included files.
+
+# Applies to all ssh connections
+Host *
+        User dcrisp
