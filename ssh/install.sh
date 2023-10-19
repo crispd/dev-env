@@ -22,13 +22,13 @@ fi
 
 # THE KEY FILENAMES IN .ssh_agent MIGHT BE DIFFERENT FOR YOU, OR YOU MAY HAVE MORE THAN ONE
 for i in "$SCRIPTPATH/profile.d/"*; do
-	echo "SCRIPTPATH: $SCRIPTPATH"
-	echo "CHECKING FOR: ~/.profile.d/$(basename "$i")"
+	#echo "SCRIPTPATH: $SCRIPTPATH"
+	#echo "CHECKING FOR: ~/.profile.d/$(basename "$i")"
 	# If NOT EMPTY
 	if [ -e "~/.profile.d/$(basename "$i")" ] && [ -f "~/.profile.d/$(basename "$i")" ]; then
 		mv "~/.profile.d/$(basename "$i")" "~/.profile.d/$(basename "$i").bak"
 	fi
 	echo "Creating Symlink Here: ~/.profile.d/$(basename "$i")"
-	echo "With this as source: $SCRIPTPATH/profile.d/$(basename "$i")"
+	#echo "With this as source: $SCRIPTPATH/profile.d/$(basename "$i")"
 	ln -fns "$SCRIPTPATH/profile.d/$(basename "$i")" "$HOME/.profile.d/$(basename "$i")"
 done

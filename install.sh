@@ -17,13 +17,13 @@ fi
 
 
 # Link dev-env's .profile file (which makes sure to iterate through ~/.profile.d)
-if [ -e ~/.profile ]; then
+if [ -e ~/.profile ] && [ ! -h ~/.profile ]; then
 	mv ~/.profile ~/.profile.bak
 fi
 ln -fns "$SCRIPT_PATH/.profile" ~/.profile
 
 # If user already has an ~/.aliases file, this makes sure it will get picked up by ~/.profile
-if [ -e ~/.aliases ]; then
+if [ -e ~/.aliases ] && [ ! -e ~/.aliases.private ]; then
 	mv ~/.aliases ~/.aliases.private
 fi
 

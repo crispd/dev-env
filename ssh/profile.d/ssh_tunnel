@@ -1,0 +1,7 @@
+
+function tunnel() {
+	local node="$([[ -p /dev/stdin ]] && cat - || echo "$@")"
+	[[ -z "$node" ]] && return 1
+	echo Connecting to $node
+	ssh -oproxycommand="ssh -qaxCT outland nc %h %p" -L 5901:localhost:5901 $node
+}

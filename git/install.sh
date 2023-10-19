@@ -15,14 +15,14 @@ sudo dnf install git -y
 #  ln -fns "$i" "~/.bashrc.d/$(basename "$i")"
 #done
 
-# Copy over config files
-if [[ ! -e ~/.gitconfig ]]; then
+# if config file exists & is not a symlink, move them to $i.bak and add symlink to dev-env version
+if [ -e ~/.gitconfig ] && [ ! -h ~/.gitignore ]; then
   mv ~/.gitconfig ~/.gitconfig.bak
 fi
 #ln -fns "$(dirname "$0")/gitconfig" ~/.gitconfig
 ln -fns "$SCRIPTPATH/gitconfig" ~/.gitconfig
 
-if [[ ! -e ~/.gitignore ]]; then
+if [ -e ~/.gitignore ] && [ ! -h ~/.gitignore ]; then
   mv ~/.gitignore ~/.gitignore.bak
 fi
 #ln -fns "$(dirname "$0")/gitignore" ~/.gitignore

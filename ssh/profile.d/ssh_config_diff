@@ -1,0 +1,31 @@
+#!/bin/bash
+# Inspect non-default ssh settings for a given host
+# USE:
+#   `ssh-config-diff github` (I've aliased HostName github.com to Host github)
+#
+# NOTE:
+#   this should be compatible with zsh
+#
+ssh-config-diff() {
+    local remotehost="$1"
+    if [ -z "$remotehost" ]; then
+        echo "ERROR: A hostname must be provided as an argument" >&2
+        return 1
+    fi
+    
+    local config1=$(ssh -G non-existing-host 2>/dev/null)
+    local config2=$(ssh -G "$remotehost" 2>/dev/null)
+    
+    if [ -z "$config1" ] || [ -z "$config2" ]; then
+        echo "ERROR: Unable to retrieve SSH configurations" >&2
+        return 1
+    fi
+    
+    echo "INFO: Should print the difference between 'ssh -G non-existing-host'"
+    echo "INFO:     and 'ssh -G "$remotehost"' (which comes from user configs)"
+    if command -v colordiff $>/dev/null; then
+        colordiff <(echo "$config1") <(echo "$config2")
+    else
+        diff <(echo "$config1") <(echo "$config2")
+    fi
+}
