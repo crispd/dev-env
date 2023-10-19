@@ -1,11 +1,10 @@
 # .aliases file for shell aliases & related envars
 
-export GHE_HOME=~/ghe-pip2
+export GHE_HOME="~/ghe-pip2/dcrisp"
 alias cd-ghe='cd $GHE_HOME'
 
-export GH_HOME=~/github
+export GH_HOME="~/github/crispd"
 alias cd-gh='cd $GH_HOME'
-alias cd-dev-env='cd-gh && cd dev-env'
 
 alias l='ls -a'
 alias ll='ls -la'

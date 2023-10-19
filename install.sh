@@ -31,7 +31,7 @@ fi
 ## DO INSTALLS
 # If no plugins were passed, default to installing a basic set in order
 if [ $# -eq 0 ]; then
-  set -- git ssh base-toolset lang aliases
+  set -- git ssh base-toolset lang shell-aliases
 fi
 
 

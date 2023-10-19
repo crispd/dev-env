@@ -8,7 +8,7 @@ sudo dnf install openssh
 mkdir -m 700 -p ~/.ssh
 
 ## Copy over config
-if [ -e ~/.ssh/config ]; then
+if [ -e ~/.ssh/config ] && [ -f ~/.ssh/config ]; then
   mv ~/.ssh/config ~/.ssh/config.bak
 fi
 #ln -fns "$(dirname "$0")/config" ~/.ssh/
@@ -28,7 +28,7 @@ for i in "$SCRIPTPATH/profile.d/"*; do
 	if [ -e "~/.profile.d/$(basename "$i")" ] && [ -f "~/.profile.d/$(basename "$i")" ]; then
 		mv "~/.profile.d/$(basename "$i")" "~/.profile.d/$(basename "$i").bak"
 	fi
-	echo "LINKING $SCRIPTPATH/profile.d/$(basename "$i")"
-	echo "TO ~/.profile.d/$(basename "$i")"
+	echo "Creating Symlink Here: ~/.profile.d/$(basename "$i")"
+	echo "With this as source: $SCRIPTPATH/profile.d/$(basename "$i")"
 	ln -fns "$SCRIPTPATH/profile.d/$(basename "$i")" "$HOME/.profile.d/$(basename "$i")"
 done
