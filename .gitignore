@@ -7,3 +7,4 @@
 # Including my logfiles seems like a bad idea.
 *.log
 starship.toml
+aliases_repos

@@ -4,5 +4,5 @@ function tunnel() {
 	local node="$([[ -p /dev/stdin ]] && cat - || echo "$@")"
 	[[ -z "$node" ]] && return 1
 	echo Connecting to $node
-	ssh -L 6000:localhost:6000 $node
+	ssh -L 5901:localhost:5901 $node
 }
