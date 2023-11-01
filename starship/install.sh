@@ -23,10 +23,20 @@ STARSHIP_INCLUDE_FILE="$HOME/.profile.d/starship_prompt"
 if [ -e $STARSHIP_INCLUDE_FILE ] && [ -f $STARSHIP_INCLUDE_FILE ]; then
 	mv $STARSHIP_INCLUDE_FILE "$STARSHIP_INCLUDE_FILE.bak"
 fi
+# NOTE
+#	Bash requires addition of `eval "$(starship init bash)"` to a dotfile like .bashrc (placed after addition of cargo envars)
+#		But the line to add differs depending on shell used, and,
+#		if scripting edits to an existing file like .bashrc, one would have to consider whether this line was already added in successive runs of this script. AND whether it was AFTER the line including cargo
+#	Solution:
+#		We have shell-specific files in a starship/setup/ folder.
+#		Each one contains the correct starship-required line for the given shell, and has a filename that matches what "$(basename $SHELL)" will output for each shell.
+# Get name of current shell
 CURRENT_SHELL="$(basename $SHELL)"
-ln -fns "$SCRIPT_PATH/starship/setup/$CURRENT_SHELL" "$HOME/.profile.d/starship_prompt"
+# Make/reset a link in ~/.profile.d/ for the shell-appropriate starship-including file
+ln -fns "$SCRIPT_PATH/starship/setup/$CURRENT_SHELL" "$HOME/.profile.d/include_starship_prompt"
 
 # Construct the starship prompt defining .toml file, and put it to use.
+#	I've chosen to use the bracketed-segments.toml preset, and prepend some extra customizations to it.
 source "$SCRIPT_PATH/starship/toml/construct.sh"
 STARSHIP_PROMPT_DEF="$HOME/.config/starship.toml"
 if [ -e $STARSHIP_PROMPT_DEF ] && [ -f $STARSHIP_PROMPT_DEF ]; then
