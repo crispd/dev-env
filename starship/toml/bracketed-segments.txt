@@ -31,6 +31,9 @@ format = '\[[$symbol($version)]($style)\]'
 [deno]
 format = '\[[$symbol($version)]($style)\]'
 
+[directory]
+format = '[$path]($style)[$read_only]($read_only_style) '
+
 [docker_context]
 format = '\[[$symbol$context]($style)\]'
 
