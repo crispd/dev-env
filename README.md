@@ -44,17 +44,10 @@ See [wiki.almalinux.org](https://wiki.almalinux.org/documentation/wsl.html#about
 2. ```dnf check-update && sudo dnf update```
 3. ```sudo dnf config-manager --set-enabled crb```
 4. ```sudo dnf install epel-release```
-<<<<<<< HEAD
-5. ```dnf check-update && sudo dnf update```
-6. ```sudo dnf upgrade``` (update to AlmaLinux 9.2)
-7. ```sudo dnf install git```
-8. *TODO: Add note about a fermi-specific group-install*
-=======
 5. ```sudo dnf install https://linux-mirrors.fnal.gov/linux/fermilab/almalinux/9/yum-conf-fermilab.rpm && sudo group install --with-optional fermilab```
 6. ```dnf check-update && sudo dnf update```
 7. ```sudo dnf upgrade``` (update to AlmaLinux 9.2)
 8. ```sudo dnf install git```
->>>>>>> aecf8c4 (Added fermi group install to **Initial Steps**)
 
 ___
 ## Using this repo to setup a development environment
