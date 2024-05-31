@@ -30,3 +30,8 @@
 	rebase = false
 [init]
 	defaultBranch = main
+[user]
+	email = gitkraken@contact-alias.pro
+[safe]
+	directory = /mnt/d/stash.crispd/rea_bts
+	directory = /mnt/d/stash.crispd/s3-hlc
