@@ -1,10 +1,15 @@
 # dev-env
 An attempt at more properly defining my personal development enviornment with AlmaLinux9 in WSL2 (Windows)
-- If not using WSL to run AlmaLinux, simply consider whether you want to install a nerd font (preparation step 4) and skip to (preparation step 5)
-- *Currently based on a repo shared by mtrudel: https://github.com/mtrudel/dotfiles*
-- *so-far, this is a proof of concept. While it has worked for me to configure fresh AlmaLinux installs on a few of my personal machines, it was really just thrown together, and is subject to quite a few changes going forward.*
+- If not using WSL to run AlmaLinux, simply consider whether you want to install a nerd font (*recommended*; see preparation step 4) and skip to (preparation step 5)
+- This repo is (or has been) inspired by:
+    - *github.com/mtrudel/dotfiles*
+    - *github.com/Griffun/dotfiles* (Chris Butler)
+    - *chezmoi.io/*
+    - *github.com/bertvv/cheat-sheets/blob/master/docs/Bash.md*
+    - *chat.openai.com*
+- *so-far, this is a proof of concept. While it has worked for me to configure fresh AlmaLinux installs on a few of my personal machines, it is very much a WIP, and is subject to quite a few changes going forward.*
 
-### A snapshot to show my resulting WSL configuration in Windows Terminal
+### A snapshot from `fastfetch` illustrating my WSL configuration in `Windows Terminal`
 ![fastfetch](assets/almalinux-wsl-fastfetch.png)
 
 ### Some comments on WIN package management
