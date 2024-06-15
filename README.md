@@ -1,6 +1,6 @@
 # dev-env
 A WIP attempt to better manage personal development enviornments with AlmaLinux9
-- Created while using AL9 within WSL, but the less agnostic aspects to this are limited to steps 1, 2 & 3 of the subsection "Preparation". Will probably work for any/most linux distros that leverage dnf/yum for package utilities.
+- Created while using AL9 within WSL, but the less agnostic aspects to this are limited to steps 1, 2 & 3 of the subsection "Preparation". This *should* generally work for any linux OS that leverages dnf/yum for package utilities.
     - If not using WSL to run AlmaLinux, consider whether you want to install a nerd font (*recommended*; see preparation step 4) and skip to (preparation step 5)
 - This repo is (or has been) inspired by:
     - *github.com/mtrudel/dotfiles*
