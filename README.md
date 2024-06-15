@@ -13,7 +13,11 @@ An attempt at more properly defining my personal development enviornment with Al
 ![fastfetch](assets/almalinux-wsl-fastfetch.png)
 
 ### Some comments on WIN package management
-The winget package manager is a really good alternative for most windows app/package installations, and seems to be what will eventually become the default package management tool for the windows OS in the future. You'll find that it is pre-installed on your machine by default. Understand that winget looks at both msstore as well as it's own package repositories; so sometimes you will see more than one version of a desired package show up when using `winget search`. At the moment, you should assume that anything not listed as coming directly from the msstore package repo will not necessarily receive automatic updates once you have it installed. I personally prefer this with most things, but just FYI. There is also the chocolatey package manager, but this is not bundled with windows by default, and you will have to install it with a few simple powershell commands that are easily found on their online guide.
+The [winget package manager](https://learn.microsoft.com/en-us/windows/package-manager/winget/) is a really good option for managing most windows app/package installations, and seems to be what will eventually become the default package management tool for the windows OS in the future. You'll find that it is pre-installed on your machine by default.
+
+Understand that winget looks at both msstore as well as it's own package repositories; so sometimes you will see more than one version of a desired package show up when using `winget search`. As the winget ecosystem is now--even if it isn't true for all cases--it would be pragmatic to take the default assumption that *anything not listed as coming directly from the msstore package repo will not receive automatic updates once you have it installed*. This isn't necessarily bad, but worth noting.
+
+There is also the [chocolatey](https://community.chocolatey.org/) (`choco`) package manager, which works well, but is not pre-installed on windows OS by default. To use it, you will have to install it with a few simple powershell commands found within their well-documented online guide.
 
 ___
 ## Preparation
