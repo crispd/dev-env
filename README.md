@@ -46,6 +46,7 @@ See [wiki.almalinux.org](https://wiki.almalinux.org/documentation/wsl.html#about
 5. ```dnf check-update && sudo dnf update```
 6. ```sudo dnf upgrade``` (update to AlmaLinux 9.2)
 7. ```sudo dnf install git```
+8. *TODO: Add note about a fermi-specific group-install*
 
 ___
 ## Using this repo to setup a development environment
