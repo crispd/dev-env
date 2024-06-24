@@ -35,3 +35,4 @@
 [safe]
 	directory = /mnt/d/stash.crispd/rea_bts
 	directory = /mnt/d/stash.crispd/s3-hlc
+	directory = /usr/lib/phoebus
