@@ -8,11 +8,4 @@ O.*/
 
 .project
 
-/bin/
-/db/
-/lib/
-/dbd/
-/html/
-/doc/
-
 *.local

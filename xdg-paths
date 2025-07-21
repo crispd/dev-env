@@ -1,0 +1,24 @@
+# Based on the XDG Base Directory Specification by freedesktop
+#
+# References:
+#   1. https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html
+#   2. https://wiki.archlinux.org/title/XDG_Base_Directory
+#
+# Personal take:
+#   *in general*
+#     - All 'HOME' xdg dirs are for user-level files; system-level is different
+#     - While not well defined in the XDG spec, add an application-specific subfolder
+#       to these locations so that it's easier to identify application associations
+#       and handle cleaning/removal tasks. (i.e. ~./local/share/neovim/)
+#   DATA: For portable program/application files. or an alternative to $HOME/.*
+#     folders that often end up cluttering one's $HOME directory.
+#     (This is where neovim often ends up installed)
+#   CONFIG: For the user's personal application-specific configurations
+#   STATE: For capturing information generated during runtimes; logs, histories, etc.
+#   CACHE: For fleeting information; a temp directory for things that can safely
+#     be removed. (I'm unsure what mechanism would actually 'clean' this cache--or how)
+#
+XDG_DATA_HOME="${HOME}/.local/share"
+XDG_CONFIG_HOME="${HOME}/.config"
+XDG_STATE_HOME="${HOME}/.local/state"
+XDG_CACHE_HOME="${HOME}/.cache"

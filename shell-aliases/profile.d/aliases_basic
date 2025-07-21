@@ -1,10 +1,29 @@
 # .aliases file for shell aliases & related envars
+# NOTE: Consider checking what these may be overwriting; `alias | cat $1`
 
-export GHE_HOME="~/ghe-pip2"
-alias cdghe='cd $GHE_HOME'
 
-export GH_HOME="~/github"
-alias cdgh='cd $GH_HOME'
+# ls:
+#   -h = human readable memory sizes (2000->2k)
+#   -A = same as -a (all), but without home & parent directories ('.' & '..')
+#alias 'ls --color=auto' # currently in another file.
+alias l='ls -ChA'
+alias ll='ls -lhA'
+# WARNING: Requires `fzf`. (consider moving to a .profile.d/fzf file)
+alias hist='history | tac | fzf' # using `tac` ensures that this initially displays the most recent history.
 
-alias l='ls -a'
-alias ll='ls -la'
+# cd shortcuts:
+#   These are directories I'm personally going to quite often
+alias cdh="cd ${HOME}" # cd-home
+alias cdl='cd -' # cd-last (last directory)
+alias ..='cd ..' # cd-parent
+alias cdp='cd ..'
+
+alias cmdr="cd ${HOME}/.local/share/commander"
+alias cssd="cd ${HOME}/.local/share/commander/csstud.d"
+alias phdir="cd ${HOME}/github/fermi-ad/phoebus-fnal"
+
+# Misc.
+alias mkdir='mkdir -v'
+# WARNING: Requires `wget`.
+alias wget='wget -c'
+
